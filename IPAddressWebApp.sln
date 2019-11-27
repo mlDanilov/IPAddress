@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPAddressWebApp", "IPAddressWebApp\IPAddressWebApp.csproj", "{69B8FCC0-6C7C-4D78-82F5-E307B828540A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPAddressDomain", "IPAddressDomain\IPAddressDomain.csproj", "{92F9C979-E556-474B-A0D3-92E90376F577}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{35912C28-DFBA-4CC7-B358-EB0748C120CD}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		IPAddress.bak = IPAddress.bak
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69B8FCC0-6C7C-4D78-82F5-E307B828540A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69B8FCC0-6C7C-4D78-82F5-E307B828540A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69B8FCC0-6C7C-4D78-82F5-E307B828540A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69B8FCC0-6C7C-4D78-82F5-E307B828540A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92F9C979-E556-474B-A0D3-92E90376F577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F9C979-E556-474B-A0D3-92E90376F577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F9C979-E556-474B-A0D3-92E90376F577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F9C979-E556-474B-A0D3-92E90376F577}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5DF5E65-824C-4158-A951-440133645A23}
+	EndGlobalSection
+EndGlobal

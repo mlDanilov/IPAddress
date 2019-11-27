@@ -1,0 +1,80 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div ng-controller="clientIpNetController">
+
+        
+        <div>
+            <!--Список клиентов-->
+            <div>
+                <h3>Список клиентов</h3>
+                <ul>
+                    <li>
+                        Фамилия:<input ng-model="client_edit.secondName" type="text" />
+                    </li>
+                    <li>
+                        Имя:<input ng-model="client_edit.firstName" type="text" />
+                    </li>
+                    <li>
+                        Отчество:<input ng-model="client_edit.patronymic" type="text" />
+                    </li>
+                    <li>
+                        День рождения:<input ng-model="client_edit.birthDay" type="date" />
+                    </li>
+                    <li>
+                        Пол:
+                        <select ng-model='client_edit.sex'
+                                ng-options='sex.id as sex.Name for sex in Sex'>
+                        </select>
+                    </li>
+                    <div>
+                        <input ng-disabled="ClientAddIsInvalid()"
+                               type="button"
+                               value="Добавить"
+                               ng-click="addClient()" />
+                        <input ng-disabled="ClientIsInvalid()"
+                               type="button"
+                               value="Редактировать"
+                               ng-click="editClient()" />
+                        <input ng-disabled="ClientIsInvalid()"
+                               type="button"
+                               value="Удалить"
+                               ng-click="deleteClient()" />
+                    </div>
+                    <select ng-model='Clients.SelectedItem'
+                            ng-options='client as client.FIO for client in Clients.Items'
+                            ng-change="currentClientChanged()">
+                    </select>
+                </ul>
+            </div>
+            <!--Список ip-подсетей клиентов-->
+            <div>
+                <h3>Список ip-подсетей</h3>
+                <div>
+                    <input class="oktet" ng-model="ipNet_edit.oktet1" type="number" />
+                    .
+                    <input class="oktet" ng-model="ipNet_edit.oktet2" type="number" />
+                    .
+                    <input class="oktet" ng-model="ipNet_edit.oktet3" type="number" />
+                    .
+                    <input class="oktet" ng-model="ipNet_edit.oktet4" type="number" />
+                    /
+                    <input class="mask" ng-model="ipNet_edit.mask" type="number" />
+                    <div>
+                        <input ng-disabled="IpNetIsInvalidAdd()"
+                               type="button" value="Добавить" ng-click="addIpNet()" />
+                        <input ng-disabled="IpNetIsInvalid()"
+                               type="button" value="Редактировать" ng-click="editIpNet()" />
+                        <input ng-disabled="IpNetIsInvalid()"
+                               type="button" value="Удалить" ng-click="deleteIpNetFromClient()" />
+                    </div>
+                </div>
+                <select ng-model='IPNets.SelectedItem'
+                        ng-options='ipnet as ipnet.ipAddress for ipnet in  IPNets.Items'
+                        ng-change="currentIPNetChanged()">
+                </select>
+            </div>
+            <div class="error">
+                {{error}}
+            </div>
+        </div>
